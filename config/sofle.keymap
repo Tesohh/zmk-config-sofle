@@ -54,6 +54,22 @@
         };
     };
 
+    macros {
+        fat_arrow: fat_arrow {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp EQUAL &kp GT>;
+            label = "FAT_ARROW";
+        };
+
+        small_arrow: small_arrow {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp MINUS &kp GT>;
+            label = "SMALL_ARROW";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -111,10 +127,10 @@
             //                |      |       |       |      |      |  |      |      |      |       |      |
 
             bindings = <
-&trans  &trans    &trans     &trans    &trans      &trans                         &trans     &trans            &trans             &trans  &trans        &trans
-&trans  &kp EXCL  &kp AT     &kp HASH  &kp DOLLAR  &kp PERCENT                    &kp PLUS   &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans  &kp MINUS     &kp UNDERSCORE
-&trans  &trans    &kp CARET  &kp LPAR  &kp RPAR    &kp AMPS                       &kp EQUAL  &kp LEFT_BRACE    &kp RIGHT_BRACE    &trans  &trans        &trans
-&trans  &trans    &trans     &trans    &trans      &kp STAR     &trans    &trans  &trans     &kp LT            &kp GT             &trans  &kp QUESTION  &kp PIPE
+&trans  &trans    &trans     &trans    &trans      &trans                         &trans     &trans            &trans             &trans        &trans        &trans
+&trans  &kp EXCL  &kp AT     &kp HASH  &kp DOLLAR  &kp PERCENT                    &kp PLUS   &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &fat_arrow    &kp MINUS     &kp UNDERSCORE
+&trans  &trans    &kp CARET  &kp LPAR  &kp RPAR    &kp AMPS                       &kp EQUAL  &kp LEFT_BRACE    &kp RIGHT_BRACE    &small_arrow  &trans        &trans
+&trans  &trans    &trans     &trans    &trans      &kp STAR     &trans    &trans  &trans     &kp LT            &kp GT             &trans        &kp QUESTION  &kp PIPE
                   &trans     &trans    &trans      &trans       &trans    &trans  &trans     &trans            &trans             &trans
             >;
 
