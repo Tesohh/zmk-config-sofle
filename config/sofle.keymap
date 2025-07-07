@@ -25,6 +25,35 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        esc_combo {
+            bindings = <&kp ESC>;
+            key-positions = <13 14>;
+        };
+
+        enter_combo {
+            bindings = <&kp ENTER>;
+            key-positions = <33 34>;
+        };
+
+        win_screenshot {
+            bindings = <&kp LG(LS(S))>;
+            key-positions = <26 27 28 25>;
+        };
+
+        mac_screenshot {
+            bindings = <&kp LG(LS(NUMBER_4))>;
+            key-positions = <31 32 33 34>;
+        };
+
+        bksp_combo {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <21 22>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -61,11 +90,11 @@
             //               |     |      |      |      |        |  |       |      |       |       |      |
 
             bindings = <
-&trans  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5                    &kp F6    &kp F7    &kp F8  &kp F9     &kp F10  &kp F11
-&trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5                    &kp N6    &kp N7    &kp N8  &kp N9     &kp N0   &kp F12
-&trans  &trans  &trans  &trans  &trans  &trans                    &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans   &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans    &trans    &trans  &trans     &trans   &trans
-                &trans  &trans  &trans  &trans  &trans    &trans  &trans    &kp DEL   &trans  &trans
+&trans  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5                    &kp F6      &kp F7    &kp F8      &kp F9     &kp F10  &kp F11
+&trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5                    &kp N6      &kp N7    &kp N8      &kp N9     &kp N0   &kp F12
+&trans  &trans  &trans  &trans  &trans  &trans                    &kp LEFT    &kp DOWN  &kp UP      &kp RIGHT  &trans   &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp C_PREV  &kp C_PP  &kp C_NEXT  &trans     &trans   &trans
+                &trans  &trans  &trans  &trans  &trans    &trans  &trans      &kp DEL   &trans      &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -82,11 +111,11 @@
             //                |      |       |       |      |      |  |      |      |      |       |      |
 
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans    &trans     &trans    &trans      &trans                         &trans     &trans            &trans             &trans  &trans        &trans
+&trans  &kp EXCL  &kp AT     &kp HASH  &kp DOLLAR  &kp PERCENT                    &kp PLUS   &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans  &kp MINUS     &kp UNDERSCORE
+&trans  &trans    &kp CARET  &kp LPAR  &kp RPAR    &kp AMPS                       &kp EQUAL  &kp LEFT_BRACE    &kp RIGHT_BRACE    &trans  &trans        &trans
+&trans  &trans    &trans     &trans    &trans      &kp STAR     &trans    &trans  &trans     &kp LT            &kp GT             &trans  &kp QUESTION  &kp PIPE
+                  &trans     &trans    &trans      &trans       &trans    &trans  &trans     &trans            &trans             &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
