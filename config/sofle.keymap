@@ -30,12 +30,12 @@
 
         esc_combo {
             bindings = <&kp ESC>;
-            key-positions = <13 14>;
+            key-positions = <1 0>;
         };
 
         enter_combo {
             bindings = <&kp ENTER>;
-            key-positions = <33 34>;
+            key-positions = <34 35>;
         };
 
         win_screenshot {
@@ -50,7 +50,7 @@
 
         bksp_combo {
             bindings = <&kp BACKSPACE>;
-            key-positions = <21 22>;
+            key-positions = <10 11>;
         };
     };
 
