@@ -54,7 +54,7 @@
         };
 
         exit_game {
-            bindings = <&to 4>;
+            bindings = <&to 0>;
             key-positions = <54 28>;
             layers = <4>;
         };
