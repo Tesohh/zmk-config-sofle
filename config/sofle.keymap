@@ -133,9 +133,9 @@
         lower {
             bindings = <
 &kp TILDE  &kp EXCL     &kp AT        &kp POUND     &kp DOLLAR     &kp PERCENT                    &kp CARET  &kp AMPERSAND         &kp ASTERISK           &trans            &trans             &trans
-&trans     &kp PAGE_UP  &kp LC(LEFT)  &kp UP_ARROW  &kp LC(RIGHT)  &kp HOME                       &kp PLUS   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans            &kp COLON          &kp UNDER
-&trans     &kp PG_DN    &kp LEFT      &kp DOWN      &kp RIGHT      &kp END                        &kp EQUAL  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp DOUBLE_QUOTES
-&trans     &trans       &trans        &trans        &trans         &trans       &trans    &trans  &trans     &trans                &kp LT                 &kp GT            &trans             &trans
+&trans     &kp PAGE_UP  &kp LC(LEFT)  &kp UP_ARROW  &kp LC(RIGHT)  &trans                         &kp PLUS   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans            &kp COLON          &kp UNDER
+&trans     &kp PG_DN    &kp LEFT      &kp DOWN      &kp RIGHT      &kp AMPS                       &kp EQUAL  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp DOUBLE_QUOTES
+&trans     &trans       &trans        &trans        &trans         &kp STAR     &trans    &trans  &trans     &trans                &kp LT                 &kp GT            &trans             &trans
                         &trans        &trans        &trans         &trans       &trans    &trans  &trans     &trans                &trans                 &trans
             >;
 
